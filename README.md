@@ -1,7 +1,8 @@
 # Vereadores SP
 
 A história desses scripts estão nesse texto:
-https://gist.github.com/oten/f9abb2b25601d5cb6df6c4f233015020
+
+http://bit.ly/2bjB1nl
 
 Exemplos de uso...
 
