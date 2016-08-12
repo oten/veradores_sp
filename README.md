@@ -13,7 +13,7 @@ $ ./ver2json.py <vereadores.txt  >vereadores.json
 
 Lendo o registro da 205ª linha do TXT em JSON:
 ```
-$ head -205 vereadores.txt | tail -2 | ./ver2json.py | ./prettify.py 
+$ head -205 vereadores.txt | tail -1 | ./ver2json.py | ./prettify.py 
 [
     {
         "Registro": 40208,
@@ -49,4 +49,28 @@ Checando com a linha original:
 $ head -205 vereadores.txt | tail -1 
 40208#Waldir da Silva Prado#####^p3^n4^sSuplente^q2786%#^i11/10/1961^f09/11/0961^ssuplente^pPTN^bVenicio Camillo Giachini%#
 ```
-O `tail -2` no primeiro caso se faz necessário pois o script `ver2json.py` sempre desconsidera a primeira linha esperando nela o cabeçalho.
+
+Combinando com grep pra visualizar um registro específico...
+```
+$ grep '#Netinho de Paula' vereadores.txt | ./ver2json.py | ./prettify.py | head -20
+[
+    {
+        "Registro": 40531,
+        "Nome": "Jose de Paula Neto",
+        "Lideranca": [
+            {
+                "DataFin": "08/04/2015",
+                "Cargo": "Lider de Bancada",
+                "DataIn": "01/04/2014",
+                "LiderPartido": "PC do B"
+            },
+            {
+                "DataFin": "07/12/2015",
+                "Cargo": "Lider de Bancada",
+                "DataIn": "09/04/2015",
+                "LiderPartido": "PDT"
+            }
+        ],
+        "NomeParlamentar": [
+            "Netinho de Paula"
+```
