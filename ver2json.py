@@ -88,7 +88,7 @@ if __name__ == "__main__":
     
     text = sys.stdin.read()
     
-    #Todas as linhas menos o cabecalho e a última string que é vazia pois o arquivo acaba com um \n.
+    #Todas as linhas menos o cabecalho e a última string que é vazia pois o arquivo acaba com um '\n'.
     rows = [row for row in text.split('\n') if row and re.search(ur'^[0-9]', row)]
     
     data_list = [{section.name: matches_to_dicts(re.finditer(section.regex, row), section.fields) for section in sections} for row in rows]
@@ -101,4 +101,4 @@ if __name__ == "__main__":
                      'Nome': row.split('#')[1],
                      'NomeParlamentar': row.split('##')[0].split('#')[-1].split('%')})
 
-    sys.stdout.write(json.dumps(data_list))
+    sys.stdout.write(json.dumps(data_list, ensure_ascii=False))
