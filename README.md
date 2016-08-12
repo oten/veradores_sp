@@ -50,7 +50,7 @@ $ head -205 vereadores.txt | tail -1
 40208#Waldir da Silva Prado#####^p3^n4^sSuplente^q2786%#^i11/10/1961^f09/11/0961^ssuplente^pPTN^bVenicio Camillo Giachini%#
 ```
 
-Combinando com grep pra visualizar um registro específico...
+Combinando com `grep` pra visualizar um registro específico...
 ```
 $ grep '#Netinho de Paula' vereadores.txt | ./ver2json.py | ./prettify.py | head -20
 [
