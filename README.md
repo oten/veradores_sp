@@ -1,6 +1,6 @@
 # Vereadores SP
 
-A história desses scripts estão nesse texto:
+A história desses scripts e como fazer o caminho completo do arquivo disponibilizado pela Câmara até o TXT desse repositório estão no texto do link abaixo:
 
 http://bit.ly/2bjB1nl
 
