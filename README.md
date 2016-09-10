@@ -13,7 +13,7 @@ $ ./ver2json.py <vereadores.txt  >vereadores.json
 
 Lendo o registro da 205ª linha do TXT em JSON:
 ```
-$ head -205 vereadores.txt | tail -1 | ./ver2json.py | ./prettify.py 
+$ sed -n '205p' vereadores.txt | ./ver2json.py | ./prettify.py 
 [
     {
         "Registro": 40208,
@@ -46,7 +46,7 @@ $ head -205 vereadores.txt | tail -1 | ./ver2json.py | ./prettify.py
 ```
 Checando com a linha original:
 ```
-$ head -205 vereadores.txt | tail -1 
+$ sed -n '205p' vereadores.txt  
 40208#Waldir da Silva Prado#####^p3^n4^sSuplente^q2786%#^i11/10/1961^f09/11/0961^ssuplente^pPTN^bVenicio Camillo Giachini%#
 ```
 
